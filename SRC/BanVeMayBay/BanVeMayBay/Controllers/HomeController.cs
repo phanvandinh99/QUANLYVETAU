@@ -24,9 +24,6 @@ namespace BanVeMayBay.Controllers
             var tickets = db.tickets.Where(m => m.status == 1 && m.departure_date == date_now2).ToList();
             ViewBag.tickets = tickets;
             return View();
-
-
-
         }
     
         public ActionResult flightOfday()

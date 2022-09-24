@@ -10,7 +10,7 @@
                 <div class="booking-confirmed booking-outer">
                     <div class="confirmation-title">
                         <div class="form-title form-title-1">
-                            <h2 class="text-danger">Ticket details: @Model.city.cityName -> @Model.city1.cityName</h2>
+                            <h2 class="text-danger">Chi Tiết Vé: @Model.city.cityName -> @Model.city1.cityName</h2>
                         </div>
                         <div class="payment-info detail">
                             <div class="row">
@@ -24,44 +24,40 @@
                 <table class="table" style="margin-top:20px;">
                     <tbody>
                         <tr>
-                            <td class="title">Airline</td>
-                            <td> <img style="width:50px;height:50px" src="~/public/images/flight/@Model.airline" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td class="title">Price</td>
+                            <td class="title">Giá</td>
                             <td class="b-id text-danger">@Model.price.Value.ToString("N0") $</td>
                         </tr>
                         <tr>
-                            <td class="title">Start Date</td>
+                            <td class="title">Ngày Xuất Phát</td>
                             <td>@Model.departure_date.Value.ToString("dd-MM-yyyy")</td>
                         </tr>
                         <tr>
-                            <td class="title">Departure Time</td>
+                            <td class="title">Giờ Xuất Phát</td>
                             <td>@Model.departure_time</td>
                         </tr>
                         <tr>
-                            <td class="title">Arrive Time</td>
+                            <td class="title">giờ Đến (Dự Kiến)</td>
                             <td>@Model.arrival_time</td>
                         </tr>
                         <tr>
-                            <td class="title">From</td>
+                            <td class="title">Từ Ga</td>
                             <td>@Model.city.cityName</td>
                         </tr>
                         <tr>
-                            <td class="title">To</td>
+                            <td class="title">Đến Ga</td>
                             <td>@Model.city1.cityName</td>
                         </tr>
                         <tr>
-                            <td class="title">FlightCode</td>
+                            <td class="title">Mã Chuyến Tàu</td>
                             <td>@Model.flightCode</td>
                         </tr>
-                        <tr>
+                        @*<tr>
                             <td class="title">Class</td>
                             <td>@Model.ticketType</td>
-                        </tr>
+                        </tr>*@
                         <tr>
-                            <td class="title">Empty seat</td>
-                            <td>@Model.guestTotal Seat</td>
+                            <td class="title">Ghế Trống</td>
+                            <td>@Model.guestTotal Ghế</td>
                         </tr>
 
                     </tbody>

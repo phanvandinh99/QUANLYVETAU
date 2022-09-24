@@ -8,13 +8,13 @@
     <div class="container card bg-white" style="padding:30px !important; ">
         <div class="search-content-slider">
             <div class="section-title text-center ">
-                <h2>SEARCH FLIGHT</h2>
-                <p>Hanoi, Da Nang, Ho Chi Minh City, Quy Nhon, Da Lat, Phu Quoc, the price is only from 899,000 VND.</p>
+                <h2>Tìm Kiếm Chuyến Đi</h2>
+                <p>Nhập Thông Tin Vào Form Dưới</p>
             </div>
             <form action="~/Site/flightSearch" method="post" id="form-search">
                 <div class="radio" align="center">
-                    <label><input value="disable" type="radio" id="typeticket" name="typeticket" checked>One Way</label>
-                    <label><input value="enable" type="radio" id="typeticket" name="typeticket">Two Way</label>
+                    <label><input value="disable" type="radio" id="typeticket" name="typeticket" checked>Chiều Đi</label>
+                    <label><input value="enable" type="radio" id="typeticket" name="typeticket">Khứ Hồi</label>
 
                 </div>
                 <input type="hidden" id="ticketCheck" value="" />
@@ -105,7 +105,7 @@
                         <div class="table_item">
                             <div class="form-group ">
                                 <div class='input-group date' id='datetimepicker1'>
-                                    <input type="text" id="departure_date" name="departure_date" class="form-control" placeholder="Start Date" onclick="return 0" required />
+                                    <input type="text" id="departure_date" name="departure_date" class="form-control" placeholder="Ngày Đi" onclick="return 0" required />
                                     <i class="flaticon-calendar"></i>
 
                                     <span class="input-group-addon">
@@ -122,7 +122,7 @@
                         <div class="table_item">
                             <div class="form-group">
                                 <div class='input-group date' id='datetimepicker2'>
-                                    <input type='text' id="arrival_date" name="arrival_date" class="form-control" placeholder="Return Day" required />
+                                    <input type='text' id="arrival_date" name="arrival_date" class="form-control" placeholder="Ngày Về" required />
                                     <i class="flaticon-calendar"></i>
                                     <span class="input-group-addon">
                                         <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -134,12 +134,11 @@
                         </div>
                     </div>
                 </div>
-                
 
                 <div class="col-md-12  ">
                     <div class="table_item " align="center">
                         <div class="search ">
-                            <button type="submit" class="btn-blue btn-red ">Search Flight</button>
+                            <button type="submit" class="btn-blue btn-red ">Tra Cứu</button>
                         </div>
                     </div>
                 </div>
@@ -162,7 +161,7 @@
                             <div class="col-md-10">
                                 <nav aria-label="breadcrumb">
                                     @{var Date = ViewBag.dateNow; }
-                                    <span style="font-weight:bold; font-size:22px;color:#ff6a00;"><i class="fas fa-fighter-jet"></i> Flights of the day: @Date.ToString("dd-MM-yyyy") </span>
+                                    <span style="font-weight:bold; font-size:22px;color:#ff6a00;"><i class="fa-solid fa-train-subway"></i> Chuyến Đi Hôm Nay: @Date.ToString("dd-MM-yyyy") </span>
 
                                 </nav>
                             </div>
@@ -176,14 +175,14 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Airline</th>
-                                <th>From</th>
-                                <th>To</th>
-                                <th>Start Time</th>
-                                <th>End Time</th>
+                                <th>Tên Tàu</th>
+                                <th>Xuất Phát</th>
+                                <th>Đến</th>
+                                <th>Giờ Đi</th>
+                                <th>Giờ Đến(Dự Kiến)</th>
                                 <th>Class</th>
-                                <th>Detail</th>
-                                <th>Price</th>
+                                <th>Chi Tiết</th>
+                                <th>Giá</th>
 
                             </tr>
                         </thead>

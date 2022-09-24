@@ -59,14 +59,14 @@ namespace BanVeMayBay.Areas.Admin.Controllers
             ticket.Sold = 0;
             if (ModelState.IsValid)
             {
-                HttpPostedFileBase file;
-                file = Request.Files["airline"];
-                string filename = file.FileName.ToString();
+                //HttpPostedFileBase file;
+                //file = Request.Files["airline"];
+                //string filename = "";
                // string ExtensionFile = Mystring.GetFileExtension(filename);
                // string namefilenew = Mystring.ToSlug(ticket.departure_date.Year.ToString())+ "." + ExtensionFile;
-                var path = Path.Combine(Server.MapPath("~/Public/images/flight"), filename);
-                file.SaveAs(path);
-                ticket.airline = filename;
+                //var path = Path.Combine(Server.MapPath("~/Public/images/flight"), filename);
+                //file.SaveAs(path);
+                ticket.airline = "";
                 ticket.created_at = DateTime.Now;
                 ticket.updated_at = DateTime.Now;
                 ticket.created_by = int.Parse(Session["Admin_id"].ToString());

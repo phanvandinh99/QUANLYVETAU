@@ -150,6 +150,7 @@
     <Content Include="Public\font\simple-line-iconsc05f-2.html" />
     <Content Include="Public\font\simple-line-iconsc05f.html" />
     <Content Include="Public\images\blog3.jpg" />
+    <Content Include="Public\images\DSVN.png" />
     <Content Include="Public\images\flight\01.jpg" />
     <Content Include="Public\images\flight\02.jpg" />
     <Content Include="Public\images\flight\03.jpg" />
@@ -166,6 +167,10 @@
     <Content Include="Public\images\flight\plane4.jpg" />
     <Content Include="Public\images\flight\plane5.jpg" />
     <Content Include="Public\images\flight\plane6.jpg" />
+    <Content Include="Public\images\flight\TauLuaBanner01.jpg" />
+    <Content Include="Public\images\flight\TauLuaBanner02.jpg" />
+    <Content Include="Public\images\flight\TauLuaBanner03.jpg" />
+    <Content Include="Public\images\logo.png" />
     <Content Include="Public\images\package3.jpg" />
     <Content Include="Public\images\partner1.png" />
     <Content Include="Public\images\partner2.png" />
