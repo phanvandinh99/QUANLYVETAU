@@ -55,7 +55,7 @@ namespace BANVETAU.Areas.Admin.Controllers
         public ActionResult Create(ticket ticket)
         {
             //ticket.flightCode = "NB_"+ticket.departure_date;
-            ticket.img = "img";
+            ticket.img = "img.jpg";
             ticket.Sold = 0;
             if (ModelState.IsValid)
             {
