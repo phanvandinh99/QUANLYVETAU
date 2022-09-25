@@ -175,12 +175,11 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Tên Tàu</th>
                                 <th>Xuất Phát</th>
                                 <th>Đến</th>
                                 <th>Giờ Đi</th>
                                 <th>Giờ Đến(Dự Kiến)</th>
-                                <th>Class</th>
+                                <th>Ghế</th>
                                 <th>Chi Tiết</th>
                                 <th>Giá</th>
 
@@ -191,9 +190,6 @@
                             @foreach (var item in ViewBag.tickets)
                             {
                                 <tr>
-                                    <td class="text-center">
-                                        <img style="width:80px;height:60px" src="~/public/images/flight/@item.airline" alt="">
-                                    </td>
                                     <td>
                                         <h6>@item.city.cityName</h6>
                                         <p>Airport (@item.city.cityName)</p>
@@ -210,9 +206,7 @@
 
                                     </td>
                                     <td>
-                                        <h6>@item.ticketType</h6>
-
-
+                                        <h6>@item.guestTotal (Bán: @item.Sold/@item.guestTotal)</h6>
                                     </td>
 
                                     <td>

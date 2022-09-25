@@ -1,7 +1,7 @@
 ﻿@using PagedList.Mvc;
 @model PagedList.IPagedList<BANVETAU.Models.ticket>
 @{
-    ViewBag.Title = "flightSearch";
+    ViewBag.Title = "Tìm kiếm Vé Tàu";
     Layout = "~/Views/Shared/_layOutSite.cshtml";
 }
 
@@ -62,7 +62,9 @@
                                             <h6>@item.arrival_time</h6>
 
                                         </td>
-                                        <td>@item.ticketType</td>
+                                        <td>
+                                            <h6>@item.guestTotal (Bán: @item.Sold/@item.guestTotal)</h6>
+                                        </td>
                                         <td>
                                             <h6><strong class="color-red-3">@item.price.Value.ToString("N0") $</strong></h6>
                                             <p class="emi">(Currency - $)</p>
@@ -70,12 +72,20 @@
                                         <td>
                                             <a href="~/chuyen-bay/@item.id">Detail</a>
                                         </td>
+                                        @if (item.Sold < item.guestTotal)
+                                        {
+                                            <td>
 
-                                        <td>
-
-                                            @Html.RadioButton("datve", item.id, new { name = "idTitket", required = "required" })
-                                            @Html.Label("Book")
-                                        </td>
+                                                @Html.RadioButton("datve", item.id, new { name = "idTitket", required = "required" })
+                                                @Html.Label("Book")
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td>
+                                                <h6>Bán Hết</h6>
+                                            </td>
+                                        }
                                     </tr>
                                 }
 
